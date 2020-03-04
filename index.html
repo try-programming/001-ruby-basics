@@ -25,8 +25,181 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <section>
+          <h1>Basics of Ruby</h1>
+        </section>
+        <section>Everything in ruby is called an object</section>
+        <section>An object, most simply, is a model of a thing or idea from the real world inside your program</section>
+        <section>
+          <h2>Basic Types</h2>
+
+          <p>Numbers</p>
+          <pre><code data-trim>
+            2
+            3
+            4
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Expression</h2>
+
+          <p>Operators combined with their oprands</p>
+          <pre><code data-trim>
+            2 + 2
+            3 / 1
+            5 - 2
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Return Values</h2>
+          <pre><code data-trim data-noescape>
+            2 + 2
+            <p class="fragment"># => 4</p>
+            3 / 1
+            <p class="fragment"># => 3</p>
+            5 - 2
+            <p class="fragment"># => 3</p>
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>What's this return?</h2>
+          <pre><code data-trim data-noescape>
+            6 % 4
+            <p class="fragment"># => 2</p>
+          </code></pre>
+          <p class="fragment">How come?</p>
+        </section>
+
+
+        <section>
+          <pre><code data-trim data-noescape>
+            6 <mark>%</mark> 4
+          </code></pre>
+          <p class="fragment">This is the modulus operator. It divides the two operands and returns <em>the remainder</em></p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            x = 3
+            x
+          </code></pre>
+          <p>What's x?</p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            <mark>x = 3</mark>
+            x
+          </code></pre>
+          <p>This is called variable assignment. Just like math class, a variable can hold a value</p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            x = 3
+            x + 5
+            x
+          </code></pre>
+          <p>What's x?</p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            x = 3
+            x + 5
+            <p class="fragment"># => 8</p>
+            x
+            <p class="fragment"># => 3</p>
+          </code></pre>
+          <p>How come?</p>
+        </section>
+
+        <section>
+          <pre><code data-trim data-noescape>
+            x = 3
+            y = x + 5
+            <p class="fragment"># => 8</p>
+            x
+            <p class="fragment"># => 3</p>
+            y
+            <p class="fragment"># => 8</p>
+          </code></pre>
+          <p class="fragment">How come?</p>
+        </section>
+
+
+        <section>
+          <p>Strings</p>
+          <pre><code data-trim data-noescape>
+            "Hello World"
+            <p class="fragment"># => "Hello World</p>
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Strings</p>
+          <pre><code data-trim data-noescape>
+            "Hello World" + ", we're learning to program today"
+            <p class="fragment"># => "Hello World, we're learning to program today"</p>
+          </code></pre>
+          <p class="fragment">This is called <strong>concatenation</strong>. We have used the <strong>+ operator</strong> to join two strings together</p>
+        </section>
+
+        <section>
+          <p>Strings</p>
+          <pre><code data-trim data-noescape>
+            name = "Jamie"
+            "Hello #{name}"
+            <p class="fragment"># => "Hello Jamie</p>
+          </code></pre>
+          <p class="fragment">This is called <em>Interpolation</em>. This is a way to embed a variable value or expression inside of a string</p>
+        </section>
+
+        <section>
+          <p>Writing a Script</p>
+          <p>In a plain text file, you can write ruby!</p>
+          <pre><code data-trim data-noescape>
+            # crappy_calculator.rb
+            puts 2 + 2
+          </code></pre>
+        </section>
+
+        <section>
+          <p>Running a Script</p>
+          <p>In the terminal, navigate to the file and run it with the ruby interpreter</p>
+          <pre><code data-trim data-noescape>
+            $ cd ~/Desktop
+            $ ruby crappy_calculator.rb
+          </code></pre>
+          <p class="fragment">cd means 'Change Directory'</p>
+          <p class="fragment">The tilde stands for your Home Directory. On mac OS this is the folder that holds your pictures, videos and desktop folders</p>
+          <p class="fragment">So this means go to the Desktop folder in the home directory and run ruby with my script</p>
+        </section>
+
+        <section>
+          <p>Interacting with the user in a script</p>
+          <pre><code data-trim data-noescape>
+            puts "Hello! What's your name?"
+            <span class="fragment">name = gets.chomp</span>
+            <span class="fragment">puts "Oh hi #{name}"</span>
+          </code></pre>
+          <p class="fragment">puts outputs a string to the screen</p>
+          <p class="fragment">gets lets the user type something into the scren</p>
+        </section>
+
+
+        <section>
+          <p>Okay, you're turn</p>
+          <p class="fragment">Make a ruby script and build a Madlibs. Create a silly story with a few placeholder parts of speech.  </p>
+          <p class="fragment">Prompt the user for each placeholder word</p>
+          <p class="fragment">Output the final story for the user</p>
+        </section>
+
+
+
 			</div>
 		</div>
 
